@@ -1,0 +1,8 @@
+* PSpice Model Editor - Version 17.2.0
+
+*$
+.MODEL MM NMOS LEVEL=1 IS=1e-32
++VTO=2.236 LAMBDA=0 KP=0.0932174
++CGSO=1.79115e-07 CGDO=1.0724e-11
+
+*$

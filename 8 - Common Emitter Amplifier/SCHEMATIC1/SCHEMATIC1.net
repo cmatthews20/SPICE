@@ -1,0 +1,16 @@
+* source 4300LAB8
+V_Vsig         N14405 0  AC 80m
++SIN 0 80m 1k 0 0 0
+R_Rsig         N14405 N14398  50 TC=0,0 
+C_CC1         N14398 N14504  1u  TC=0,0 
+R_R1         0 N14504  22k TC=0,0 
+R_R2         N14504 N14500  100k TC=0,0 
+V_V2         N14500 0 10Vdc
+Q_Q         N14627 N14504 N14796 Q2N3904
+V_V3         N14623 0 10Vdc
+R_R3         N14627 N14623  4.7k TC=0,0 
+R_RE1         N14800 N14796  220 TC=0,0 
+R_RE2         0 N14800  1k TC=0,0 
+C_CE         0 N14800  1u  TC=0,0 
+C_CC2         N14627 N14964  1u  TC=0,0 
+R_R6         0 N14964  51k TC=0,0 

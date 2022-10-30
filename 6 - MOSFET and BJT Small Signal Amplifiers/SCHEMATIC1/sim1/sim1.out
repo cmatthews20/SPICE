@@ -1,0 +1,210 @@
+
+**** 07/13/22 00:07:39 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-sim1"  [ C:\Users\Cole\Documents\4300Lab4CMatthews-PSpiceFiles\SCHEMATIC1\sim1.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "sim1.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 5ms 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source 4300LAB4CMATTHEWS
+V_VDD         N146120 0 10Vdc
+V_VgsAC         N146940 0  AC 65m
++SIN 0 65m 1k 0 0 0
+R_Rs         0 N147550  220 TC=0,0 
+R_Rd         N146120 N14913  2k TC=0,0 
+V_VGSdc         N14946 N146940 3Vdc
+M_M1         N14913 N14946 N147550 N147550 M2N7000
+Q_Q1         N15545 N15482 0 Q2N3904
+V_VbeAC         N152300 0  AC 65m
++SIN 0 65m 1k 0 0 0
+R_RB         N15475 N15482  33k TC=0,0 
+R_RC         N15545 N153780  2k TC=0,0 
+V_VBE         N15475 N152300 1Vdc
+V_VCC         N153780 0 10Vdc
+
+**** RESUMING sim1.cir ****
+.END
+
+**** 07/13/22 00:07:39 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-sim1"  [ C:\Users\Cole\Documents\4300Lab4CMatthews-PSpiceFiles\SCHEMATIC1\sim1.sim ] 
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               Q2N3904         
+               NPN             
+       LEVEL    1            
+          IS    6.734000E-15 
+          BF  416.4          
+          NF    1            
+         VAF   74.03         
+         IKF     .06678      
+         ISE    6.734000E-15 
+          NE    1.259        
+          BR     .7371       
+          NR    1            
+         ISS    0            
+          RB   10            
+          RE    0            
+          RC    1            
+         CJE    4.493000E-12 
+         VJE     .75         
+         MJE     .2593       
+         CJC    3.638000E-12 
+         VJC     .75         
+         MJC     .3085       
+        XCJC    1            
+         CJS    0            
+         VJS     .75         
+          TF  301.200000E-12 
+         XTF    2            
+         VTF    4            
+         ITF     .4          
+          TR  239.500000E-09 
+         XTB    1.5          
+          KF    0            
+          AF    1            
+          CN    2.42         
+           D     .87         
+
+
+**** 07/13/22 00:07:39 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-sim1"  [ C:\Users\Cole\Documents\4300Lab4CMatthews-PSpiceFiles\SCHEMATIC1\sim1.sim ] 
+
+
+ ****     MOSFET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               M2N7000         
+               NMOS            
+       LEVEL    3            
+           L    2.000000E-06 
+           W     .12         
+         VTO    1.73         
+          KP    1.073000E-06 
+       GAMMA    0            
+         PHI     .6          
+      LAMBDA    0            
+          RD     .5489       
+          RS     .02         
+          RG  546.2          
+          RB    1.000000E-03 
+         RDS   48.000000E+06 
+          IS   10.000000E-15 
+          JS    0            
+          PB     .8          
+        PBSW     .8          
+         CBD   74.460000E-12 
+          CJ    0            
+        CJSW    0            
+        CGSO   73.610000E-12 
+        CGDO    6.487000E-12 
+        CGBO    0            
+         TOX    2.000000E-06 
+          XJ    0            
+       UCRIT   10.000000E+03 
+       DELTA    0            
+         ETA    0            
+      DIOMOD    1            
+         VFB    0            
+        LETA    0            
+        WETA    0            
+          U0    0            
+        TEMP    0            
+         VDD    5            
+       XPART    0            
+
+
+**** 07/13/22 00:07:39 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-sim1"  [ C:\Users\Cole\Documents\4300Lab4CMatthews-PSpiceFiles\SCHEMATIC1\sim1.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N14913)    1.7163 (N14946)    3.0000 (N15475)    1.0000 (N15482)     .6740     
+
+(N15545)    7.0396 (N146120)   10.0000                   (N146940)    0.0000    
+
+(N147550)     .9112                   (N152300)    0.0000                       
+
+(N153780)   10.0000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_VDD       -4.142E-03
+    V_VgsAC      0.000E+00
+    V_VGSdc      0.000E+00
+    V_VbeAC     -9.880E-06
+    V_VBE       -9.880E-06
+    V_VCC       -1.480E-03
+
+    TOTAL POWER DISSIPATION   5.62E-02  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 07/13/22 00:07:39 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-sim1"  [ C:\Users\Cole\Documents\4300Lab4CMatthews-PSpiceFiles\SCHEMATIC1\sim1.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .03
+

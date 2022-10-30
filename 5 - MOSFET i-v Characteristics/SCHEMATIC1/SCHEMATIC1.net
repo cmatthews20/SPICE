@@ -1,0 +1,35 @@
+* source COLE4400LAB5
+M_M1         N14397 N14592 0 0 Mbreakn  
++ L=10u  
++ W=170u  
++ AD=8500p  
++ AS=8500p  
++ PD=440u  
++ PS=440u  
++ NRD=0.1  
++ NRS=0.1   
+R_R1         N14596 N14592  100k TC=0,0 
+R_R2         N14393 N14557  10 TC=0,0 
+V_PRINT1         N14393 N14397 0V
+         
+.PRINT        DC I(V_PRINT1) 
+          
+.PRINT         DC V([N14397],[0]) 
+V_V1         N14596 0 0Vdc
+V_V2         N14557 0 0Vdc
+M_M2         N147392 N14893 0 0 Mbreakp  
++ L=10u  
++ W=360u  
++ AD=18000p  
++ AS=18000p  
++ PD=820u  
++ PS=820u  
++ NRD=0.54  
++ NRS=0.54   
+V_V3         0 N14886 0Vdc
+V_V4         N14973 0 4
+V_PRINT3         N148010 N14973 0V
+         
+.PRINT        DC I(V_PRINT3) 
+R_R3         N14886 N14893  100k TC=0,0 
+R_R4         N148010 N147392  10 TC=0,0 
