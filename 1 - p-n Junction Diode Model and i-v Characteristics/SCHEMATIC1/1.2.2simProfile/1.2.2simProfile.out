@@ -1,0 +1,107 @@
+
+**** 05/21/22 20:58:47 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-1.2.2simProfile"  [ H:\4300Lab1Try2-PSpiceFiles\SCHEMATIC1\1.2.2simProfile.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "1.2.2simProfile.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 15ms 0 0.0000001 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source 4300LAB1TRY2
+V_V1         N14424 0  AC 24
++SIN 0 24 1k 0 0 0
+D_D1         N14435 N14439 Dbreak 
+R_R1         N14424 N14435  100 TC=0,0 
+V_V2         N14439 0 6Vdc
+
+**** RESUMING 1.2.2simProfile.cir ****
+.END
+
+**** 05/21/22 20:58:47 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-1.2.2simProfile"  [ H:\4300Lab1Try2-PSpiceFiles\SCHEMATIC1\1.2.2simProfile.sim ] 
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               Dbreak          
+          IS   10.000000E-15 
+          RS     .1          
+         CJO  100.000000E-15 
+
+
+**** 05/21/22 20:58:47 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-1.2.2simProfile"  [ H:\4300Lab1Try2-PSpiceFiles\SCHEMATIC1\1.2.2simProfile.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N14424)    0.0000 (N14435) 601.0E-12 (N14439)    6.0000 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         6.010E-12
+    V_V2        -6.010E-12
+
+    TOTAL POWER DISSIPATION   3.61E-11  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 05/21/22 20:58:47 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-1.2.2simProfile"  [ H:\4300Lab1Try2-PSpiceFiles\SCHEMATIC1\1.2.2simProfile.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =        1.56
+

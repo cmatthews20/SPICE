@@ -1,0 +1,6 @@
+* source 4300LAB1TRY2
+V_V1         N14424 0  AC 24
++SIN 0 24 1k 0 0 0
+D_D1         N14435 N14439 Dbreak 
+R_R1         N14424 N14435  100 TC=0,0 
+V_V2         N14439 0 6Vdc

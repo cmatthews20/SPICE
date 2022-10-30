@@ -1,0 +1,117 @@
+
+**** 05/21/22 21:48:29 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC2-newrootsim"  [ H:\4300Lab1Try2-PSpiceFiles\SCHEMATIC2\newrootsim.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "newrootsim.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 15ms 0 0.000001 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC2.net" 
+
+
+
+**** INCLUDING SCHEMATIC2.net ****
+* source 4300LAB1TRY2
+D_D1         N00556 0 D1N4148 
+R_R4         N00596 N00556  10k TC=0,0 
+R_R3         N00556 N00552  1k TC=0,0 
+C_C1         N00533 N00552  10u  TC=0,0 
+V_V2         N00596 0 1Vdc
+V_V1         N00533 0  AC 50m
++SIN 0 50m 1k 0 0 0
+
+**** RESUMING newrootsim.cir ****
+.END
+
+**** 05/21/22 21:48:29 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC2-newrootsim"  [ H:\4300Lab1Try2-PSpiceFiles\SCHEMATIC2\newrootsim.sim ] 
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               D1N4148         
+          IS    2.682000E-09 
+           N    1.836        
+         ISR    1.565000E-09 
+         IKF     .04417      
+          BV  100            
+         IBV  100.000000E-06 
+          RS     .5664       
+          TT   11.540000E-09 
+         CJO    4.000000E-12 
+          VJ     .5          
+           M     .3333       
+
+
+**** 05/21/22 21:48:29 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC2-newrootsim"  [ H:\4300Lab1Try2-PSpiceFiles\SCHEMATIC2\newrootsim.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00533)    0.0000 (N00552)     .4648 (N00556)     .4648 (N00596)    1.0000 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V2        -5.352E-05
+    V_V1         0.000E+00
+
+    TOTAL POWER DISSIPATION   5.35E-05  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 05/21/22 21:48:29 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC2-newrootsim"  [ H:\4300Lab1Try2-PSpiceFiles\SCHEMATIC2\newrootsim.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .27
+

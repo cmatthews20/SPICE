@@ -1,0 +1,8 @@
+* source 4300LAB1TRY2
+D_D1         N00556 0 D1N4148 
+R_R4         N00596 N00556  10k TC=0,0 
+R_R3         N00556 N00552  1k TC=0,0 
+C_C1         N00533 N00552  10u  TC=0,0 
+V_V2         N00596 0 1Vdc
+V_V1         N00533 0  AC 50m
++SIN 0 50m 1k 0 0 0
