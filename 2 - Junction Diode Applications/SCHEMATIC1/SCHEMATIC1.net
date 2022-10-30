@@ -1,0 +1,11 @@
+* source 4300PRELAB2COLE
+R_R1         0 VOUT  1k TC=0,0 
+R_R2         N00189 N00257  1k TC=0,0 
+D_D1         N00189 N00220 Dbreak 
+D_D2         N00189 N00224 Dbreak 
+D_D3         N00189 VOUT Dbreak 
+D_D4         N00228 VOUT Dbreak 
+V_V1         N00257 0 5Vdc
+V_Vc         N00228 0 5Vdc
+V_Vb         N00224 0 5Vdc
+V_Va         N00220 0 5Vdc

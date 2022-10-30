@@ -1,0 +1,44 @@
+
+**** 05/31/22 21:55:11 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC2-part2"  [ H:\4300Prelab2Cole-PSpiceFiles\SCHEMATIC2\part2.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "part2.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "C:/OrCAD/OrCAD_16.6_Lite/tools/capture/library/pspice/diode.olb" 
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 1000ns 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC2.net" 
+
+
+
+**** INCLUDING SCHEMATIC2.net ****
+* source 4300PRELAB2COLE
+R_RS         N00131 N00127  100 TC=0,0 
+V_VS         N00127 0 10Vdc
+R_RL         0 N00131  100 TC=0,0 
+D_D1         0 N00131 D1N4732 
+
+**** RESUMING part2.cir ****
+.END
+
+ERROR(ORPSIM-15113): Model D1N4732 used by D_D1 is undefined
+
